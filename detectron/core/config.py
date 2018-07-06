@@ -189,6 +189,9 @@ __C.TRAIN.FREEZE_CONV_BODY = False
 # output directory
 __C.TRAIN.AUTO_RESUME = True
 
+# Training will copy TRAIN.WEIGHTS and treat it as a candidate checkpoint
+__C.TRAIN.COPY_WEIGHTS = False
+
 # Add StopGrad at a specified stage so the bottom layers are frozen
 __C.TRAIN.FREEZE_AT = 2
 
@@ -779,7 +782,7 @@ __C.MRCNN.THRESH_BINARIZE = 0.5
 
 
 # ---------------------------------------------------------------------------- #
-# Keyoint Mask R-CNN options ("KRCNN" = Mask R-CNN with Keypoint support)
+# Keypoint Mask R-CNN options ("KRCNN" = Mask R-CNN with Keypoint support)
 # ---------------------------------------------------------------------------- #
 __C.KRCNN = AttrDict()
 
